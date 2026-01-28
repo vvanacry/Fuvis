@@ -194,6 +194,63 @@
       padding: 28px;
     }
 
+    .contacts {
+      background: #101520;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .contacts-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    .contact-item .meta {
+      display: grid;
+      gap: 2px;
+      font-size: 14px;
+    }
+
+    .contact-item .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      display: inline-block;
+    }
+
+    .icon-brand {
+      fill: #ffffff;
+    }
+
+    .icon-mail {
+      fill: none;
+      stroke: var(--muted);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     footer {
       padding: 36px 0 46px;
       color: var(--muted);
@@ -327,20 +384,39 @@
     </section>
 
     <section>
-      <div class="container email-block">
-        <h2 class="section-title">Мы запускаемся скоро</h2>
-        <p class="lead">Оставь email — пришлём доступ первым. Без спама.</p>
-        <form class="form" name="early-access-footer" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="early-access-footer" />
-          <p style="display:none;">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-          <input type="email" name="email" placeholder="Твой email" required />
-          <button type="submit">Join early access</button>
-        </form>
-        <p style="margin:10px 0 0; font-size:12px; color: var(--muted);">
-          Email сохраняются в Netlify Forms (панель сайта).
-        </p>
+      <div class="container contacts">
+        <h2 class="section-title">Контакты</h2>
+        <p class="lead">Пиши напрямую — отвечу лично.</p>
+        <div class="contacts-list">
+          <a class="contact-item" href="https://t.me/vvannacry" target="_blank" rel="noreferrer">
+            <svg class="icon icon-brand" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9.04 15.79 8.7 20.2c.49 0 .7-.21.95-.46l2.28-2.18 4.72 3.44c.86.48 1.47.23 1.69-.8l3.07-14.45c.27-1.26-.46-1.75-1.28-1.45L1.86 9.43c-1.22.48-1.2 1.17-.22 1.47l4.79 1.5L17.9 5.2c.54-.36 1.03-.16.63.2z"/>
+            </svg>
+            <div class="meta">
+              <span class="label">Telegram</span>
+              <span>@vvannacry</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <svg class="icon icon-mail" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="M3 7l9 6 9-6"></path>
+            </svg>
+            <div class="meta">
+              <span class="label">Email</span>
+              <span>amir.muharjamov@gmail.com</span>
+            </div>
+          </div>
+          <a class="contact-item" href="https://github.com/vvanacry" target="_blank" rel="noreferrer">
+            <svg class="icon icon-brand" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.48c.5.1.68-.22.68-.48v-1.7c-2.77.6-3.36-1.34-3.36-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.63-1.36-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.66.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .26.18.59.69.48A10 10 0 0 0 12 2z"/>
+            </svg>
+            <div class="meta">
+              <span class="label">GitHub</span>
+              <span>github.com/vvanacry</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>
